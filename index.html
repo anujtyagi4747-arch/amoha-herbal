@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amoha Herbal | Ayurvedic & Herbal Products</title>
+
+<meta name="description" content="Amoha Herbal - Ayurvedic, cosmetics, color cosmetics and herbal supplement products.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fbfaf5;
+    color:#24352a;
+    overflow-x:hidden;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(255,255,255,.94);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 18px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #edf0e8;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.logo-icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#dfead8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.logo-text{
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:.3px;
+    color:#315a3c;
+}
+
+.logo-text span{
+    display:block;
+    font-size:8px;
+    letter-spacing:2px;
+    color:#8b927f;
+    margin-top:2px;
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icon-btn{
+    width:39px;
+    height:39px;
+    border:1px solid #e7ebe1;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    padding:18px 15px 0;
+}
+
+.hero-box{
+    min-height:470px;
+    border-radius:28px;
+    overflow:hidden;
+    position:relative;
+    background:
+    linear-gradient(
+        180deg,
+        rgba(34,65,42,.03),
+        rgba(34,65,42,.25)
+    ),
+    url("https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:28px;
+    color:white;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(255,255,255,.88);
+    color:#315a3c;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:13px;
+}
+
+.hero h1{
+    font-size:39px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:14px;
+    line-height:1.6;
+    max-width:310px;
+    color:#f7faf4;
+}
+
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+    padding:14px 22px;
+    border-radius:30px;
+    background:#fff;
+    color:#315a3c;
+    font-size:13px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+/* ===== SECTION COMMON ===== */
+
+.section{
+    padding:34px 17px 0;
+}
+
+.section-head{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    margin-bottom:17px;
+}
+
+.section-title{
+    font-size:23px;
+    font-weight:800;
+    color:#263b2c;
+}
+
+.section-sub{
+    font-size:11px;
+    color:#879083;
+    margin-top:5px;
+}
+
+.view-all{
+    font-size:11px;
+    font-weight:700;
+    color:#4d7657;
+}
+
+/* ===== CATEGORIES ===== */
+
+.category-scroll{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    padding-bottom:5px;
+    scrollbar-width:none;
+}
+
+.category-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.category{
+    min-width:105px;
+    background:#fff;
+    border:1px solid #edf0e8;
+    border-radius:20px;
+    padding:12px 9px;
+    text-align:center;
+}
+
+.category-img{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:8px;
+}
+
+.category-name{
+    font-size:11px;
+    font-weight:700;
+    color:#344538;
+}
+
+/* ===== PRODUCT PREVIEW ===== */
+
+.products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.product-card{
+    background:#fff;
+    border:1px solid #edf0e8;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+.product-img{
+    width:100%;
+    height:175px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-info{
+    padding:12px;
+}
+
+.product-name{
+    font-size:13px;
+    font-weight:700;
+    color:#2e4033;
+    line-height:1.35;
+}
+
+.product-type{
+    font-size:10px;
+    color:#8b938b;
+    margin-top:4px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:10px;
+}
+
+.price{
+    font-size:14px;
+    font-weight:800;
+    color:#315a3c;
+}
+
+.add-btn{
+    width:31px;
+    height:31px;
+    border:0;
+    border-radius:50%;
+    background:#315a3c;
+    color:#fff;
+    font-size:18px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(min-width:700px){
+    body{
+        max-width:480px;
+        margin:auto;
+        background:#f1f3ed;
+    }
+
+    .header{
+        max-width:480px;
+    }
+
+    .hero-box{
+        min-height:520px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-icon">🌿</div>
+
+        <div class="logo-text">
+            Amoha Herbal
+            <span>NATURAL • PURE • CARE</span>
+        </div>
+    </div>
+
+    <div class="header-icons">
+        <button class="icon-btn">⌕</button>
+        <button class="icon-btn">🛒</button>
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-box">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                HERBAL • AYURVEDIC • BEAUTY
+            </div>
+
+            <h1>
+                Nature's Care,<br>
+                Made For You.
+            </h1>
+
+            <p>
+                Discover premium Ayurvedic, herbal,
+                cosmetic and wellness products crafted
+                with care.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                Explore Products &nbsp; →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PART 1 ENDS HERE -->
+  <!-- ================= PART 2 ================= -->
+
+<!-- CATEGORIES -->
+
+<section class="section">
+
+    <div class="section-head">
+        <div>
+            <div class="section-title">Shop by Category</div>
+            <div class="section-sub">Explore our natural collection</div>
+        </div>
+
+        <a href="#products" class="view-all">View All</a>
+    </div>
+
+
+    <div class="category-scroll">
+
+        <div class="category">
+            <img class="category-img"
+            src="https://images.unsplash.com/photo-1611073769517-6b5c5b2b4e7c?auto=format&fit=crop&w=300&q=80">
+            <div class="category-name">Ayurvedic</div>
+        </div>
+
+        <div class="category">
+            <img class="category-img"
+            src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=300&q=80">
+            <div class="category-name">Cosmetics</div>
+        </div>
+
+        <div class="category">
+            <img class="category-img"
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=300&q=80">
+            <div class="category-name">Color Beauty</div>
+        </div>
+
+        <div class="category">
+            <img class="category-img"
+            src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80">
+            <div class="category-name">Supplements</div>
+        </div>
+
+        <div class="category">
+            <img class="category-img"
+            src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=300&q=80">
+            <div class="category-name">Herbal Care</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEATURED PRODUCTS -->
+
+<section class="section" id="products">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">Featured Products</div>
+            <div class="section-sub">Natural choices for everyday care</div>
+        </div>
+
+        <a href="#products" class="view-all">View All</a>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1611073769517-6b5c5b2b4e7c?auto=format&fit=crop&w=600&q=85">
+
+            <div class="product-info">
+
+                <div class="product-name">
+                    Herbal Face Care
+                </div>
+
+                <div class="product-type">
+                    Ayurvedic • Natural
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹499
+                    </div>
+
+                    <button class="add-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=600&q=85">
+
+            <div class="product-info">
+
+                <div class="product-name">
+                    Herbal Skin Cream
+                </div>
+
+                <div class="product-type">
+                    Skin Care • Herbal
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹399
+                    </div>
+
+                    <button class="add-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=85">
+
+            <div class="product-info">
+
+                <div class="product-name">
+                    Natural Beauty Kit
+                </div>
+
+                <div class="product-type">
+                    Beauty • Care
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹699
+                    </div>
+
+                    <button class="add-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <img class="product-img"
+            src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=85">
+
+            <div class="product-info">
+
+                <div class="product-name">
+                    Herbal Wellness
+                </div>
+
+                <div class="product-type">
+                    Supplement • Herbal
+                </div>
+
+                <div class="product-bottom">
+
+                    <div class="price">
+                        ₹599
+                    </div>
+
+                    <button class="add-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PART 2 ENDS HERE -->
+  <!-- ================= PART 3 ================= -->
+
+<!-- CONTRACT MANUFACTURING -->
+
+<section class="section">
+
+    <div class="manufacturing-box">
+
+        <div class="manufacturing-content">
+
+            <span class="small-label">
+                B2B • PRIVATE LABEL
+            </span>
+
+            <h2>
+                Build Your Brand<br>
+                With Amoha Herbal
+            </h2>
+
+            <p>
+                From custom formulation to packaging,
+                we help businesses create premium
+                Ayurvedic, cosmetic and herbal products.
+            </p>
+
+            <a href="#contact" class="manufacturing-btn">
+                Get a Quote →
+            </a>
+
+        </div>
+
+        <div class="leaf-decoration">
+            🌿
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* ===== MANUFACTURING ===== */
+
+.manufacturing-box{
+    position:relative;
+    overflow:hidden;
+    min-height:300px;
+    border-radius:26px;
+    padding:28px 22px;
+    background:
+    linear-gradient(135deg,#e8f0df,#f8f4e7);
+    border:1px solid #e0e8d8;
+}
+
+.manufacturing-content{
+    position:relative;
+    z-index:2;
+    max-width:300px;
+}
+
+.small-label{
+    display:inline-block;
+    font-size:9px;
+    letter-spacing:1.5px;
+    font-weight:800;
+    color:#60765e;
+    margin-bottom:12px;
+}
+
+.manufacturing-box h2{
+    font-size:27px;
+    line-height:1.15;
+    color:#294532;
+    margin-bottom:12px;
+}
+
+.manufacturing-box p{
+    font-size:12px;
+    line-height:1.65;
+    color:#657266;
+}
+
+.manufacturing-btn{
+    display:inline-flex;
+    margin-top:19px;
+    padding:12px 18px;
+    border-radius:25px;
+    background:#315a3c;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+}
+
+.leaf-decoration{
+    position:absolute;
+    right:-18px;
+    bottom:-20px;
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    transform:rotate(-12deg);
+}
+
+/* ===== WHY AMOHA ===== */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.why-card{
+    background:#fff;
+    border:1px solid #edf0e8;
+    border-radius:19px;
+    padding:18px 13px;
+}
+
+.why-icon{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    background:#edf4e8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    margin-bottom:11px;
+}
+
+.why-card h3{
+    font-size:13px;
+    color:#304534;
+    margin-bottom:6px;
+}
+
+.why-card p{
+    font-size:10px;
+    line-height:1.55;
+    color:#858d84;
+}
+
+</style>
+
+
+<!-- WHY AMOHA HERBAL -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">
+                Why Amoha Herbal?
+            </div>
+
+            <div class="section-sub">
+                Quality you can trust
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🌿
+            </div>
+
+            <h3>
+                Herbal Focus
+            </h3>
+
+            <p>
+                Carefully developed products
+                inspired by natural wellness.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                ✨
+            </div>
+
+            <h3>
+                Quality First
+            </h3>
+
+            <p>
+                Focus on quality, consistency
+                and professional manufacturing.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🧪
+            </div>
+
+            <h3>
+                Custom Formula
+            </h3>
+
+            <p>
+                Flexible formulation options
+                for your unique brand needs.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                📦
+            </div>
+
+            <h3>
+                Private Label
+            </h3>
+
+            <p>
+                Product development and
+                packaging support under your brand.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PART 3 ENDS HERE -->
