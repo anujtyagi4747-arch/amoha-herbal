@@ -1824,3 +1824,1186 @@ function sendEnquiry(){
 
 
 <!-- PART 6 ENDS HERE -->
+<!-- ================= PART 7 ================= -->
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <div class="footer-logo">
+            🌿 <span>Amoha Herbal</span>
+        </div>
+
+        <p>
+            Ayurvedic, herbal and beauty solutions
+            crafted with care for modern brands.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <div>
+            <h4>Explore</h4>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div>
+            <h4>Categories</h4>
+            <a href="#products">Ayurvedic</a>
+            <a href="#products">Cosmetics</a>
+            <a href="#products">Supplements</a>
+        </div>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+        <h4>Get In Touch</h4>
+
+        <a href="tel:+919999999999">
+            📞 +91 99999 99999
+        </a>
+
+        <a href="mailto:info@amoha.com">
+            ✉️ info@amoha.com
+        </a>
+
+        <span>
+            📍 India
+        </span>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Amoha Herbal
+        </span>
+
+        <span>
+            All Rights Reserved
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<style>
+
+/* ===== FOOTER ===== */
+
+.footer{
+    margin-top:40px;
+    padding:30px 18px 105px;
+    background:#263c2d;
+    color:#fff;
+}
+
+.footer-brand{
+    padding-bottom:25px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:20px;
+    font-weight:800;
+}
+
+.footer-logo span{
+    letter-spacing:.2px;
+}
+
+.footer-brand p{
+    margin-top:10px;
+    max-width:290px;
+    color:#bdc9bd;
+    font-size:10px;
+    line-height:1.7;
+}
+
+
+.footer-links{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:24px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.footer h4{
+    font-size:12px;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.footer-links a{
+    display:block;
+    color:#b9c6ba;
+    font-size:10px;
+    margin-bottom:9px;
+}
+
+
+.footer-contact{
+    padding:23px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.footer-contact a,
+.footer-contact span{
+    display:block;
+    color:#bdc9bd;
+    font-size:10px;
+    margin-top:9px;
+}
+
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding-top:20px;
+    color:#91a092;
+    font-size:8px;
+}
+
+
+/* ===== WHATSAPP ===== */
+
+.whatsapp-btn{
+    position:fixed;
+    right:17px;
+    bottom:82px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    z-index:1100;
+    box-shadow:0 7px 22px rgba(0,0,0,.20);
+}
+
+
+/* ===== MOBILE NAV ===== */
+
+.mobile-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:66px;
+    background:rgba(255,255,255,.97);
+    border-top:1px solid #e8ece4;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    z-index:1000;
+    backdrop-filter:blur(12px);
+}
+
+.nav-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    min-width:55px;
+    color:#8a938a;
+    font-size:9px;
+    font-weight:600;
+}
+
+.nav-icon{
+    font-size:18px;
+    line-height:1;
+}
+
+.nav-item.active{
+    color:#315a3c;
+}
+
+</style>
+
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="whatsapp-btn"
+    href="https://wa.me/919999999999"
+    target="_blank"
+    aria-label="WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- MOBILE BOTTOM NAV -->
+
+<nav class="mobile-nav">
+
+    <a href="#" class="nav-item active">
+
+        <span class="nav-icon">⌂</span>
+        Home
+
+    </a>
+
+
+    <a href="#products" class="nav-item">
+
+        <span class="nav-icon">◫</span>
+        Shop
+
+    </a>
+
+
+    <a href="#services" class="nav-item">
+
+        <span class="nav-icon">✦</span>
+        Services
+
+    </a>
+
+
+    <a href="#contact" class="nav-item">
+
+        <span class="nav-icon">♡</span>
+        Enquiry
+
+    </a>
+
+</nav>
+
+
+<script>
+
+/* ===== MOBILE NAV ACTIVE ===== */
+
+document.querySelectorAll(".nav-item")
+.forEach(function(item){
+
+    item.addEventListener("click",function(){
+
+        document.querySelectorAll(".nav-item")
+        .forEach(function(nav){
+            nav.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
+
+<!-- ================= END ================= -->
+<!-- ================= PART 8 ================= -->
+
+<style>
+
+/* ===== CART DRAWER ===== */
+
+.cart-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(20,35,25,.38);
+    z-index:2000;
+    display:none;
+}
+
+.cart-overlay.show{
+    display:block;
+}
+
+.cart-drawer{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+    border-radius:28px 28px 0 0;
+    padding:20px 17px 25px;
+    max-height:78vh;
+    overflow:auto;
+    animation:cartUp .3s ease;
+}
+
+@keyframes cartUp{
+    from{
+        transform:translateY(100%);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+
+.cart-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.cart-head h2{
+    font-size:20px;
+    color:#294532;
+}
+
+.close-cart{
+    width:34px;
+    height:34px;
+    border:0;
+    border-radius:50%;
+    background:#edf3e9;
+    color:#315a3c;
+    font-size:18px;
+}
+
+.cart-empty{
+    text-align:center;
+    padding:30px 10px;
+    color:#8a9289;
+    font-size:11px;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:11px 0;
+    border-bottom:1px solid #edf0e8;
+}
+
+.cart-item img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:13px;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.cart-item-info strong{
+    display:block;
+    font-size:11px;
+    color:#304534;
+}
+
+.cart-item-info span{
+    display:block;
+    font-size:10px;
+    color:#7f887f;
+    margin-top:4px;
+}
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.qty-box button{
+    width:25px;
+    height:25px;
+    border:0;
+    border-radius:50%;
+    background:#edf3e9;
+    color:#315a3c;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:14px;
+    font-weight:800;
+    color:#294532;
+}
+
+.checkout-btn{
+    width:100%;
+    border:0;
+    margin-top:15px;
+    padding:14px;
+    border-radius:25px;
+    background:#315a3c;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+}
+
+.cart-badge{
+    position:absolute;
+    top:-3px;
+    right:-3px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#315a3c;
+    color:#fff;
+    font-size:8px;
+    display:none;
+    align-items:center;
+    justify-content:center;
+}
+
+.header-cart{
+    position:relative;
+}
+
+</style>
+
+
+<!-- CART -->
+
+<div class="cart-overlay" id="cartOverlay">
+
+    <div class="cart-drawer">
+
+        <div class="cart-head">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+        <div id="cartItems">
+
+            <div class="cart-empty">
+                Your cart is empty 🌿
+            </div>
+
+        </div>
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <span id="cartTotal">
+                ₹0
+            </span>
+
+        </div>
+
+        <button
+            class="checkout-btn"
+            onclick="checkoutCart()">
+
+            Proceed to Checkout →
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ===== CART SYSTEM ===== */
+
+let cart = [];
+
+
+/* ADD PRODUCT */
+
+document.querySelectorAll(".add-btn")
+.forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        const card =
+        this.closest(".product-card");
+
+        const name =
+        card.querySelector(".product-name").textContent.trim();
+
+        const price =
+        parseInt(
+            card.querySelector(".price")
+            .textContent
+            .replace("₹","")
+            .trim()
+        );
+
+        const image =
+        card.querySelector(".product-img").src;
+
+        const existing =
+        cart.find(function(item){
+            return item.name === name;
+        });
+
+        if(existing){
+
+            existing.qty++;
+
+        }else{
+
+            cart.push({
+                name:name,
+                price:price,
+                image:image,
+                qty:1
+            });
+
+        }
+
+        updateCart();
+
+        openCart();
+
+    });
+
+});
+
+
+/* UPDATE CART */
+
+function updateCart(){
+
+    const container =
+    document.getElementById("cartItems");
+
+    const totalBox =
+    document.getElementById("cartTotal");
+
+    if(cart.length === 0){
+
+        container.innerHTML =
+        '<div class="cart-empty">Your cart is empty 🌿</div>';
+
+        totalBox.textContent = "₹0";
+
+        return;
+
+    }
+
+    let total = 0;
+
+    container.innerHTML = "";
+
+    cart.forEach(function(item,index){
+
+        total += item.price * item.qty;
+
+        const row =
+        document.createElement("div");
+
+        row.className = "cart-item";
+
+        row.innerHTML = `
+
+            <img src="${item.image}">
+
+            <div class="cart-item-info">
+
+                <strong>
+                    ${item.name}
+                </strong>
+
+                <span>
+                    ₹${item.price}
+                </span>
+
+            </div>
+
+            <div class="qty-box">
+
+                <button onclick="changeQty(${index},-1)">
+                    −
+                </button>
+
+                <span>
+                    ${item.qty}
+                </span>
+
+                <button onclick="changeQty(${index},1)">
+                    +
+                </button>
+
+            </div>
+        `;
+
+        container.appendChild(row);
+
+    });
+
+    totalBox.textContent =
+    "₹" + total;
+
+}
+
+
+/* CHANGE QUANTITY */
+
+function changeQty(index,value){
+
+    cart[index].qty += value;
+
+    if(cart[index].qty <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+
+}
+
+
+/* OPEN CART */
+
+function openCart(){
+
+    document
+    .getElementById("cartOverlay")
+    .classList.add("show");
+
+}
+
+
+/* CLOSE CART */
+
+function closeCart(){
+
+    document
+    .getElementById("cartOverlay")
+    .classList.remove("show");
+
+}
+
+
+/* CHECKOUT */
+
+function checkoutCart(){
+
+    if(cart.length === 0){
+
+        alert("Your cart is empty.");
+
+        return;
+
+    }
+
+    let message =
+    "Hello Amoha Herbal,%0A%0A" +
+    "I want to place an enquiry/order:%0A%0A";
+
+    let total = 0;
+
+    cart.forEach(function(item){
+
+        message +=
+        item.name +
+        " x " +
+        item.qty +
+        " = ₹" +
+        (item.price * item.qty) +
+        "%0A";
+
+        total += item.price * item.qty;
+
+    });
+
+    message +=
+    "%0ATotal: ₹" +
+    total;
+
+    window.open(
+        "https://wa.me/919999999999?text=" +
+        message,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+<!-- PART 8 ENDS HERE -->
+<!-- ================= PART 9 ================= -->
+
+<style>
+
+/* ===== SEARCH ===== */
+
+.search-box{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:16px;
+    z-index:2500;
+    display:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+
+.search-box.show{
+    display:block;
+}
+
+.search-inner{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.search-inner input{
+    flex:1;
+    height:45px;
+    border:1px solid #e2e9df;
+    border-radius:24px;
+    outline:none;
+    padding:0 16px;
+    font-size:12px;
+    background:#f8faf6;
+}
+
+.search-close{
+    width:40px;
+    height:40px;
+    border:0;
+    border-radius:50%;
+    background:#edf3e9;
+    color:#315a3c;
+    font-size:18px;
+}
+
+
+/* ===== PRODUCT MODAL ===== */
+
+.product-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(20,35,25,.45);
+    z-index:2200;
+    display:none;
+    align-items:flex-end;
+}
+
+.product-modal.show{
+    display:flex;
+}
+
+.product-popup{
+    width:100%;
+    max-height:88vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:28px 28px 0 0;
+    animation:popupUp .3s ease;
+}
+
+@keyframes popupUp{
+    from{
+        transform:translateY(100%);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+
+.popup-image{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.popup-content{
+    padding:22px 18px 28px;
+}
+
+.popup-close{
+    position:absolute;
+    right:16px;
+    top:15px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    font-size:20px;
+    color:#315a3c;
+}
+
+.popup-type{
+    font-size:9px;
+    color:#7c8b7b;
+    letter-spacing:1px;
+    font-weight:700;
+}
+
+.popup-title{
+    font-size:23px;
+    color:#294532;
+    margin:7px 0;
+}
+
+.popup-price{
+    font-size:17px;
+    color:#315a3c;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.popup-description{
+    font-size:11px;
+    color:#788178;
+    line-height:1.7;
+}
+
+.popup-add{
+    width:100%;
+    margin-top:18px;
+    padding:14px;
+    border:0;
+    border-radius:25px;
+    background:#315a3c;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+}
+
+
+/* ===== SEARCH RESULT ===== */
+
+.no-result{
+    text-align:center;
+    padding:35px 10px;
+    color:#879087;
+    font-size:11px;
+}
+
+</style>
+
+
+<!-- SEARCH PANEL -->
+
+<div class="search-box" id="searchBox">
+
+    <div class="search-inner">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search products..."
+            oninput="searchProducts()">
+
+        <button
+            class="search-close"
+            onclick="closeSearch()">
+
+            ×
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- PRODUCT MODAL -->
+
+<div class="product-modal" id="productModal">
+
+    <div class="product-popup">
+
+        <button
+            class="popup-close"
+            onclick="closeProduct()">
+
+            ×
+
+        </button>
+
+        <img
+            id="popupImage"
+            class="popup-image"
+            src="">
+
+        <div class="popup-content">
+
+            <div
+                id="popupType"
+                class="popup-type">
+            </div>
+
+            <div
+                id="popupTitle"
+                class="popup-title">
+            </div>
+
+            <div
+                id="popupPrice"
+                class="popup-price">
+            </div>
+
+            <div
+                id="popupDescription"
+                class="popup-description">
+
+                Carefully developed with a
+                focus on quality, natural care
+                and everyday wellness.
+
+            </div>
+
+            <button
+                class="popup-add"
+                onclick="addPopupProduct()">
+
+                Add To Cart →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* ===== SEARCH OPEN ===== */
+
+document
+.querySelector(".icon-btn")
+.addEventListener("click",function(){
+
+    document
+    .getElementById("searchBox")
+    .classList.add("show");
+
+    document
+    .getElementById("searchInput")
+    .focus();
+
+});
+
+
+/* ===== SEARCH CLOSE ===== */
+
+function closeSearch(){
+
+    document
+    .getElementById("searchBox")
+    .classList.remove("show");
+
+    document
+    .getElementById("searchInput")
+    .value = "";
+
+    searchProducts();
+
+}
+
+
+/* ===== SEARCH PRODUCTS ===== */
+
+function searchProducts(){
+
+    let value =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+    let cards =
+    document.querySelectorAll(".product-card");
+
+    let found = false;
+
+    cards.forEach(function(card){
+
+        let name =
+        card
+        .querySelector(".product-name")
+        .textContent
+        .toLowerCase();
+
+        let type =
+        card
+        .querySelector(".product-type")
+        .textContent
+        .toLowerCase();
+
+        if(
+            value === "" ||
+            name.includes(value) ||
+            type.includes(value)
+        ){
+
+            card.style.display = "";
+
+            found = true;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* ===== PRODUCT CARD CLICK ===== */
+
+document
+.querySelectorAll(".product-card")
+.forEach(function(card){
+
+    card.addEventListener("click",function(event){
+
+        if(
+            event.target.classList.contains("add-btn")
+        ){
+
+            return;
+
+        }
+
+        let image =
+        card.querySelector(".product-img").src;
+
+        let name =
+        card.querySelector(".product-name").textContent.trim();
+
+        let type =
+        card.querySelector(".product-type").textContent.trim();
+
+        let price =
+        card.querySelector(".price").textContent.trim();
+
+        document
+        .getElementById("popupImage")
+        .src = image;
+
+        document
+        .getElementById("popupTitle")
+        .textContent = name;
+
+        document
+        .getElementById("popupType")
+        .textContent = type;
+
+        document
+        .getElementById("popupPrice")
+        .textContent = price;
+
+        window.currentPopup = {
+            name:name,
+            type:type,
+            price:parseInt(
+                price.replace("₹","")
+            ),
+            image:image
+        };
+
+        document
+        .getElementById("productModal")
+        .classList.add("show");
+
+    });
+
+});
+
+
+/* ===== CLOSE PRODUCT ===== */
+
+function closeProduct(){
+
+    document
+    .getElementById("productModal")
+    .classList.remove("show");
+
+}
+
+
+/* ===== ADD FROM POPUP ===== */
+
+function addPopupProduct(){
+
+    let product =
+    window.currentPopup;
+
+    if(!product) return;
+
+    let existing =
+    cart.find(function(item){
+
+        return item.name === product.name;
+
+    });
+
+    if(existing){
+
+        existing.qty++;
+
+    }else{
+
+        cart.push({
+            name:product.name,
+            price:product.price,
+            image:product.image,
+            qty:1
+        });
+
+    }
+
+    updateCart();
+
+    closeProduct();
+
+    openCart();
+
+}
+
+</script>
+
+
+<!-- PART 9 ENDS HERE -->
